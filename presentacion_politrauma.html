@@ -181,9 +181,20 @@
     box-sizing:border-box;
   }
   .ref svg{ flex:0 0 auto;margin-top:.15em;opacity:.85; stroke:var(--accent); }
-  .ref ol{ margin:0;padding-left:1.4em; columns:1; }
+  .ref ol{ margin:0;padding-left:0;list-style:none;columns:1; }
   .ref.cols ol{ columns:2; column-gap:2.2em; }
   .ref li{ margin:.12em 0; }
+
+  /* Bibliografía final — numeración 1–7 */
+  .reveal ol.biblio-list{
+    list-style:decimal;
+    padding-left:1.6em;
+  }
+  .reveal ol.biblio-list li{
+    display:list-item;
+    padding-left:.25em;
+    margin:.35em 0;
+  }
 
   /* Slide number */
   .reveal .slide-number{
@@ -1136,14 +1147,14 @@
       <div class="slidewrap">
         <div class="kicker">Literatura científica de alta especialidad</div>
         <h2>Bibliografía general</h2>
-        <ol style="font-size:.48em;line-height:1.5;columns:2;column-gap:2.4em;margin-top:.3em;padding-left:1.3em;color:var(--text-soft)">
-          <li>Tornetta, P., III, et al. (2025). <em>Rockwood and Green's Fractures in Adults</em> (10th ed.). Lippincott Williams &amp; Wilkins.</li>
-          <li>American College of Surgeons Committee on Trauma. (2018). <em>ATLS&reg; Student Course Manual</em> (10th ed.). Chicago: ACS.</li>
-          <li>Beltran, M. J., et al. (2016). Resuscitation and Treatment of Shock. <em>J Orthop Trauma, 30</em>(Suppl 3), S2–S6.</li>
-          <li>Stevens, N. M., &amp; Tejwani, N. C. (2024). Damage-control orthopedics or early total care. <em>J Trauma Acute Care Surg, 96</em>(5), 694–701.</li>
-          <li>Polmear, M. M., et al. (2024). Early Care of Polytraumatized Patients. <em>JAAOS, 32</em>(8), 341–350.</li>
-          <li>Wise, C. P. M., et al. (2024). Femur fractures in burn patients: a 22-year case series. <em>Burns Open, 8</em>(2), 75–81.</li>
-          <li>Evans, E. Burke. (1966). Orthopaedic Measures in the Treatment of Severe Burns. <em>JBJS, 48</em>(4), 643–669.</li>
+        <ol class="biblio-list" style="font-size:.48em;line-height:1.5;columns:2;column-gap:2.4em;margin-top:.3em;color:var(--text-soft)">
+          <li>Tornetta, P., III, Ricci, W. M., Ostrum, R. F., McKee, M. D., Ollivere, B. J., &amp; de Ridder, V. A. (2025). <em>Rockwood and Green's Fractures in Adults</em> (10th ed.). Lippincott Williams &amp; Wilkins.</li>
+          <li>American College of Surgeons Committee on Trauma. (2018). <em>Advanced Trauma Life Support (ATLS&reg;) Student Course Manual</em> (10th ed.). Chicago: American College of Surgeons.</li>
+          <li>Beltran, M. J., Becker, T. E., Hurley, R. K., Gurney, J. M., &amp; Hayda, R. A. (2016). Resuscitation and Treatment of Shock. <em>Journal of Orthopaedic Trauma, 30</em>(Suppl 3), S2–S6.</li>
+          <li>Stevens, N. M., &amp; Tejwani, N. C. (2024). Damage-control orthopedics or early total care: What you need to know. <em>The Journal of Trauma and Acute Care Surgery, 96</em>(5), 694–701.</li>
+          <li>Polmear, M. M., Kakalecik, J., Croft, C., &amp; Hagen, J. E. (2024). Early Care of Polytraumatized Patients: A Framework for Orthopaedic Surgeons. <em>The Journal of the American Academy of Orthopaedic Surgeons (JAAOS), 32</em>(8), 341–350.</li>
+          <li>Wise, C. P. M., Ivanko, A., Vander Voort, C. W. D., Lee, M. A., &amp; Palmieri, T. L. (2024). Femur fractures in burn patients: A 22-year case series. <em>Burns Open, 8</em>(2), 75–81.</li>
+          <li>Evans, E. Burke. (1966). Orthopaedic Measures in the Treatment of Severe Burns. <em>The Journal of Bone &amp; Joint Surgery (JBJS), 48</em>(4), 643–669.</li>
         </ol>
       </div>
     </section>
