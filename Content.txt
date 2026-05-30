@@ -1,0 +1,298 @@
+﻿DIAPOSITIVA 1: Portada Oficial
+* Institución: CHRISTUS MUGUERZA / UDEM Sistema de Salud.
+* Departamento: Servicio de Traumatología y Ortopedia.
+* Evento: CURSO ANUAL DE RESIDENTES MUGUERZA.
+* Fecha de Presentación: 03 de Junio de 2026.
+* Tema Central: Evaluación y manejo en pacientes politrauma.
+* Asesor de la Sesión: Dr. Alberto Padilla Dieste.
+* Ponente: Dr. Manuel Antonio Salinas Lugo R4 Traumatología y Ortopedia
+
+
+DIAPOSITIVA 2: Organización del Curso Académico
+* Sede de Alta Especialidad: Hospital Christus Muguerza Alta Especialidad.
+* Liderazgo del Servicio:
+   * Jefe del Servicio de Traumatología y Ortopedia: Dr. Armando de la Fuente Flores
+   * Profesor Adjunto del Programa: Dr. Luis Andrés Valverde Galindo.
+
+
+DIAPOSITIVA 3: Temario y Esquema de la Presentación
+* Título: Estructura Temática de la Sesión.
+* Unidades de Discusión:
+   * Introducción y conceptualización del paciente politraumatizado.
+   * Protocolo ATLS® 10.ª Edición (Evaluación primaria, secundaria y terciaria).
+   * Escalas de severidad e índices anatómico-fisiológicos (ISS vs. NISS).
+   * Tiempos quirúrgicos, ventanas de oportunidad y Second Hit.
+   * Fisiopatología del control de daños: Damage Control Orthopedics (DCO) frente a Early Total Care (ETC) y Early Appropriate Care (EAC).
+   * Particularidades y abordaje del paciente pediátrico politraumatizado.
+   * Estrategias avanzadas en pacientes con lesiones asociadas complejas (Fracturas concurrentes con quemaduras).
+* Referencia Bibliográfica:
+   * Core Curriculum de la Orthopaedic Trauma Association (OTA) para la Formación de Especialistas en Trauma Músculo-esquelético Mayor, 2024-2025.
+DIAPOSITIVA 4: Introducción – Definición y Rol Crítico de la Ortopedia
+* Definición de Paciente Politraumatizado: Presencia de lesiones traumáticas múltiples que comprometen, de forma simultánea o secuencial, la función de al menos dos sistemas orgánicos, representando de manera intrínseca una amenaza directa para la vida.
+* Papel Crítico del Ortopedista: La intervención del especialista en trauma es obligatoria desde las fases iniciales de la reanimación, enfocándose de manera crítica en la estabilización provisional de fracturas inestables y el control del sangrado exanguinante de origen músculo-esquelético.
+* Sustento Basado en Evidencia: Múltiples estudios demuestran que la intervención ortopédica protocolizada y temprana en el politraumatismo optimiza drásticamente los resultados clínicos a largo plazo y disminuye de forma significativa los días de estancia en la Unidad de Cuidados Intensivos (UCI) y hospitalización general.
+* Criterio de Gravedad Operativo: Puntaje en la escala Injury Severity Score (ISS) mayor a 16 puntos.
+* Referencia Bibliográfica:
+   * Tornetta, P., III, Ricci, W. M., Ostrum, R. F., McKee, M. D., Ollivere, B. J., & de Ridder, V. A. (2025). Rockwood and Green's Fractures in Adults (10th ed.). Lippincott Williams & Wilkins.
+DIAPOSITIVA 5: ATLS® 10.ª Edición – Sistemática de la Evaluación Primaria
+* Estrategia Unificada (ABCDE) con Enfoque "C-ABCDE":
+   * C Inicial (Catastrophic Hemorrhage): Control inmediato de hemorragias externas exanguinantes masivas mediante torniquetes o compresión antes de la manipulación de la vía aérea.
+   * A (Airway): Gestión avanzada de la vía aérea acompañada invariablemente de control estricto y estabilización de la columna cervical.
+   * B (Breathing): Asegurar la correcta mecánica respiratoria, ventilación y aporte de oxígeno suplementario. Exclusión de neumotórax a tensión (mediante clínica o E-FAST extendido).
+   * C (Circulation): Evaluación del estado hemodinámico y reanimación intravascular dirigida.
+   * D (Disability): Determinación rápida del estado neurológico mediante la Escala de Coma de Glasgow y reactividad pupilar.
+   * E (Exposure): Exposición anatómica completa del paciente, implementando medidas rigurosas para el control de la temperatura y prevención de la hipotermia.
+* Referencia Bibliográfica:
+   * American College of Surgeons Committee on Trauma. (2018). Advanced Trauma Life Support (ATLS®) Student Course Manual (10th ed.). Chicago: American College of Surgeons.
+DIAPOSITIVA 6: ATLS® – Diferenciación y Clasificación del Shock Hemorrágico
+* Objetivo: Discriminar de forma inmediata el shock de etiología hemorrágica del shock neurogénico, obstructivo y cardiogénico en el trauma.
+* Tabla de Clasificación de la Hemorragia (Fisiología del Shock):
+Parámetro Clínico
+	Clase I
+	Clase II
+	Clase III
+	Clase IV
+	Pérdida de sangre (%)
+	$< 15\%$
+	$15\% - 30\%$
+	$30\% - 40\%$
+	$> 40\%$
+	Frecuencia Cardiaca (FC)
+	Normal
+	$> 100$ lpm
+	$> 120$ lpm
+	$> 140$ lpm
+	Presión Arterial (PA)
+	Normal
+	Normal
+	Disminuida
+	Disminuida
+	pH Sistémico
+	Normal
+	Normal
+	Disminuido
+	Disminuido
+	Estado Mental
+	Ansioso
+	Confundido
+	Letárgico
+	Letargo / Coma
+	Tratamiento Inicial
+	Cristaloides
+	Cristaloides
+	Líquidos + Sangre
+	Líquidos + Sangre
+	* 
+Referencia Bibliográfica:
+   * American College of Surgeons Committee on Trauma. (2018). Advanced Trauma Life Support (ATLS®) Student Course Manual (10th ed.). Chicago: American College of Surgeons.
+DIAPOSITIVA 7: ATLS® – Manejo del Paciente No Respondedor a Cristaloides
+   * Falla en la Respuesta: Aquellos pacientes que demuestran una respuesta transitoria o nula a la carga inicial de soluciones cristaloides se correlacionan fisiopatológicamente con hemorragias severas clasificadas como Clase III o Clase IV (pérdidas estimadas $>1500$ mL o $>30-40\%$ del volumen circulante).
+   * Conducta Terapéutica Inmediata: Requieren de manera mandatoria e inmediata el cese de infusión de cristaloides para evitar la coagulopatía por dilución y la activación de protocolos de transfusión masiva (PTM).
+   * Logística de Infusión: De acuerdo con la premura y disponibilidad temporal del caso, se optará por la administración de sangre con pruebas cruzadas completas, sangre específica por tipo ABO/Rh, o en su defecto, concentrados del grupo O negativo (y O positivo en varones o mujeres posmenopáusicas) de forma universal.
+   * Referencia Bibliográfica:
+   * Beltran, M. J., Becker, T. E., Hurley, R. K., Gurney, J. M., & Hayda, R. A. (2016). Resuscitation and Treatment of Shock. Journal of Orthopaedic Trauma, 30(Suppl 3), S2–S6.
+DIAPOSITIVA 8: ATLS® – Optimización Circulatoria Basada en Cristaloides Isotónicos
+   * Premisa Fundamental: Optimizar con precisión el sistema circulatorio con el fin último de restaurar la perfusión microvascular y asegurar una adecuada oxigenación tisular terminal, limitando el volumen de soluciones a un bolo inicial de 1 litro en adultos.
+   * Tabla Expandida de Pérdida Hemática (Parámetros Cardiorrespiratorios y Renales):
+Variable / Componente
+	Clase 1
+	Clase 2
+	Clase 3
+	Clase 4
+	Pérdida de Sangre (mL)
+	Hasta 750 mL
+	750 - 1500 mL
+	1500 - 2000 mL
+	$> 2000$ mL
+	Frecuencia Cardiaca
+	$< 100$ lpm
+	100 - 120 lpm
+	120 - 140 lpm
+	$> 140$ lpm
+	Presión Arterial
+	Normal
+	Normal
+	Disminuida
+	Disminuida
+	Presión de Pulso (mmHg)
+	Normal
+	Disminuida
+	Disminuida
+	Disminuida
+	Frecuencia Respiratoria
+	14 - 20 rpm
+	20 - 30 rpm
+	30 - 40 rpm
+	$> 35$ rpm
+	Gasto Urinario (mL/hora)
+	$> 30$ mL/h
+	20 - 30 mL/h
+	5 - 15 mL/h
+	Despreciable
+	   * 
+Referencia Bibliográfica:
+      * American College of Surgeons Committee on Trauma. (2018). Advanced Trauma Life Support (ATLS®) Student Course Manual (10th ed.). Chicago: American College of Surgeons.
+DIAPOSITIVA 9: ATLS® – Resucitación con Control de Daños (Damage Control Resuscitation)
+      * Indicación Directa: Pacientes con respuestas inestables o nulas a fluidos primarios con choque profundo secundario a trauma músculo-esquelético mayor (fémur bilateral, fracturas inestables de pelvis).
+      * Filosofía de Transfusión Balanceada: Se limita estrictamente el uso de cristaloides para evitar la disrupción de coágulos nativos por hipertensión y dilución. Se instituye el Protocolo de Transfusión Masiva basado en una relación balanceada 1:1:1.
+      * Componentes del Protocolo:
+      * 1 Unidad de Concentrado de Eritrocitos (pRBC).
+      * 1 Unidad de Plasma Fresco Congelado (PFC) [Aporte de factores de coagulación].
+      * 1 Unidad de Plaquetas.
+      * Evolución Fisiopatológica: Control del Diamante de la Muerte, integrando la reposición activa de Calcio Iónico (mantener $>0.9$ mmol/L) afectado por la quelación del citrato contenido en los hemoderivados.
+      * Referencia Bibliográfica:
+      * Holcomb, J. B., et al. (2015). Transfusion of plasma, platelets, and red blood cells in a 1:1:1 vs a 1:1:2 ratio and mortality in patients with severe trauma: The PROPPR randomized clinical trial. JAMA, 313(5), 471-482.
+DIAPOSITIVA 10: Resucitación y Tratamiento del Shock en el Trauma Ortopédico
+      * Epidemiología Crítica: La hemorragia masiva continúa posicionada como la principal causa de muerte prevenible en el entorno del trauma civil y militar.
+      * Cambio de Paradigma del Especialista: Los cirujanos ortopedistas deben integrarse activamente en la reanimación y estabilización inicial del paciente politraumatizado, trascendiendo el manejo aislado de los focos de fractura ósea.
+      * Uso Avanzado de Torniquetes:
+      * Su implementación inmediata en lesiones exanguinantes de extremidades (mecanismos por aplastamiento, amputaciones traumáticas, fracturas expuestas Gustilo III-C) reduce drásticamente la mortalidad prehospitalaria.
+      * Regla de Oro: Deben permanecer colocados y monitorizados, registrando estrictamente la hora de aplicación, hasta garantizar el control quirúrgico definitivo en quirófano (tiempo seguro $<2$ horas).
+      * Referencia Bibliográfica:
+      * Beltran, M. J., Becker, T. E., Hurley, R. K., Gurney, J. M., & Hayda, R. A. (2016). Resuscitation and Treatment of Shock. Journal of Orthopaedic Trauma, 30(Suppl 3), S2–S6.
+DIAPOSITIVA 11: Herramientas Avanzadas de Diagnóstico y Control Hemostático en Shock
+      * Imagenología de Urgencia: El ultrasonido enfocado FAST (con énfasis extendido pleuropulmonar) y la radiografía anteroposterior de pelvis y tórax representan las herramientas diagnósticas iniciales clave en la sala de choque.
+      * Lavado Peritoneal Diagnóstico (LPD): Mantiene una vigencia crítica en escenarios donde el rastreo FAST resulta indeterminado, el paciente persiste hemodinámicamente inestable y no se dispone de acceso inmediato o seguro a una Tomografía Computarizada de cuerpo completo (Pan-Scan).
+      * Estrategia Farmacológica: El Ácido Tranexámico (TXA) demuestra su máxima eficacia reduciendo la mortalidad por sangrado e hiperfibrólisis si es infundido con una dosis de carga de 1g estrictamente dentro de la primera hora (máximo 3 horas) posterior al insulto traumático (Protocolo CRASH-2).
+      * Técnicas Endovasculares (REBOA): La Oclusión Endovascular Retrógrada de la Aorta es altamente eficaz en hemorragias pélvicas mecánicamente inestables de origen arterial no compresibles (Zona III de la aorta).
+      * Referencia Bibliográfica:
+      * CRASH-2 collaborators. (2010). Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage (CRASH-2): a randomised, placebo-controlled trial. The Lancet, 376(9734), 23-32.
+DIAPOSITIVA 12: Criterios Clínicos e Índices Predictivos para Transfusión Masiva (MTP)
+      * Criterios de Activación Inmediata del MTP:
+      * Pérdida de volumen sanguíneo estimada $> 1500$ mL en un lapso agudo.
+      * Necesidad prevista o consumo real de $> 10$ unidades de concentrados eritrocitarios en un periodo de 24 horas o $>4$ unidades en 1 hora.
+      * Estado de hipotensión arterial refractaria (PAS $< 90$ mmHg) sin respuesta clínica tras la administración de cargas iniciales.
+      * Score ABC / Predictor MTP: Un puntaje $\ge 2$ puntos indica una probabilidad del $85\%$ de requerir un PTM:
+      * Mecanismo de Trauma Penetrante (1 punto).
+      * Presión Arterial Sistólica (PAS) $\le 90$ mmHg (1 punto).
+      * Frecuencia Cardiaca (FC) $\ge 120$ lpm (1 punto).
+      * Ultrasonido FAST Positivo (1 punto).
+      * Monitoreo Viscoelástico: Migración temprana de la resucitación empírica a una terapia guiada por metas mediante Tromboelastografía (TEG) o Rotoflotometría (ROTEM) para dirigir el uso de crioprecipitados o plaquetas.
+      * Referencia Bibliográfica:
+      * Cotton, B. A., et al. (2009). A simplified early predictor of excessive transfusion (ADEPT) and massive transfusion (ABC-score) in the injured patient. The Journal of Trauma, 67(2), 263-268.
+DIAPOSITIVA 13: ATLS® – Evaluación Secundaria y Terciaria
+      * Evaluación Secundaria:
+      * Historia Clínica Dirigida (Mnemotecnia AMPLIA): Alergias, Medicamentos, Patologías previas, Última ingesta y Ambiente/Eventos.
+      * Examen Físico Segmentario: Evaluación minuciosa de extremidades buscando deformidades, arcos de movilidad anormales, estigmas de trauma de alta energía y palpación de pulsos periféricos.
+      * Ventana Temporal: Debe ejecutarse una vez estabilizada la reanimación inicial.
+      * Evaluación Terciaria:
+      * Justificación Fisiopatológica: La literatura demuestra que hasta un 12% de las lesiones músculo-esqueléticas (fracturas ocultas de escafoides, meseta tibial sin desplazamiento, lesiones ligamentarias complejas de rodilla/tobillo) pasan desapercibidas en las valoraciones iniciales. Consiste en un examen clínico repetido de pies a cabeza y revisión crítica de la totalidad de los estudios de imagen a las 24-48 horas del ingreso.
+      * Referencia Bibliográfica:
+      * Biffl, W. L., et al. (2003). The tertiary trauma survey: a useful device to detect missed injuries. The Journal of Trauma, 54(1), 38-42.
+DIAPOSITIVA 14: Indicadores Metabólicos de Adecuada Reanimación
+      * Lactato Sérico:
+      * Rango Normal: Menor a 2.5 mmol/L.
+      * Relevancia Clínica: Marcador directo de hipoperfusión tisular periférica y desvío celular hacia el metabolismo anaerobio.
+      * Cinética de Aclaramiento (Lactate Clearance): Una falla en disminuir el lactato $>10-20\%$ por hora en las primeras 4 horas predice el desarrollo de disfunción orgánica múltiple.
+      * Déficit de Base:
+      * Rango Normal: Entre -2 y +2 mmol/L.
+      * Interpretación: Valores significativamente más negativos (e.g., $< -6$ mEq/L) reflejan la gravedad de la acidosis metabólica sistémica, correlacionándose de forma estrecha con la necesidad de transfusión masiva y el desarrollo de coagulopatía consumativa.
+      * Referencia Bibliográfica:
+      * Polmear, M. M., Kakalecik, J., Croft, C., & Hagen, J. E. (2024). Early Care of Polytraumatized Patients: A Framework for Orthopaedic Surgeons. The Journal of the American Academy of Orthopaedic Surgeons (JAAOS), 32(8), 341-350.
+DIAPOSITIVA 15: Escalas Anatómicas de Severidad – ISS frente a NISS
+      * Abbreviated Injury Scale (AIS): Escala base que clasifica el daño anatómico por regiones corporales asignando un puntaje del 1 (leve) al 6 (incompatible con la vida).
+      * Injury Severity Score (ISS):
+      * Cálculo: Sumatoria de los cuadrados de los puntajes AIS de las 3 regiones corporales más gravemente afectadas: $ISS = (AIS_1)^2 + (AIS_2)^2 + (AIS_3)^2$.
+      * Limitación: Subestima la gravedad al extraer solo una lesión por región anatómica.
+      * New Injury Severity Score (NISS):
+      * Definición: Modificación propuesta para mitigar el sesgo de subestimación del ISS en traumatismos severos confinados a un solo segmento (e.g., fractura multifragmentaria de fémur + fractura de pelvis inestable + fractura expuesta de tibia dentro de la misma región de extremidades).
+      * Operación: Selecciona y suma los cuadrados de las tres lesiones más graves con mayor puntaje AIS, independientemente de la región anatómica donde coexistan.
+      * Cálculo: $NISS = (AIS_{max1})^2 + (AIS_{max2})^2 + (AIS_{max3})^2$.
+      * Referencia Bibliográfica:
+      * Osler, T., Baker, S. P., & Long, W. (1997). A modification of the Injury Severity Score that both improves accuracy and simplifies calculation. The Journal of Trauma, 43(6), 922-925.
+DIAPOSITIVA 16: Fenómenos Fisiopatológicos – El Concepto de "Second Hit"
+      * Definición Operativa: Amplificación y agravamiento agudo de la Respuesta Inflamatoria Sistémica (SIRS) originada por una segunda agresión controlada (procedimiento médico-quirúrgico prolongado) sobre un organismo previamente sensibilizado inmunológicamente.
+      * Mecánica Inmunológica:
+      * "Primer Golpe" (First Hit): Representado por el trauma inicial. Genera activación masiva de neutrófilos periféricos ("primed neutrophils") y liberación de citocinas proinflamatorias (IL-1, IL-6, TNF-$\alpha$).
+      * "Segundo Golpe" (Second Hit): Una fijación intramedular o una osteosíntesis abierta prolongada ejecutada de forma prematura actúa como un nuevo insulto, desencadenando disfunción endotelial sistémica, microtrombosis, daño pulmonar agudo (SDRA) y falla orgánica múltiple.
+      * Referencia Bibliográfica:
+      * Giannoudis, P. V., et al. (2004). Inflammatory response in polytrauma: an overview of the pathophysiology and clinical implications. Injury, 35(5), 440-451.
+DIAPOSITIVA 17: Damage Control Orthopedics (DCO) – Control de Daños Ortopédico
+      * Conceptualización: Estrategia quirúrgica basada en un abordaje escalonado. Consiste en la estabilización provisional y rápida de las fracturas mediante el uso de fijadores externos rígidos, debridamiento inmediato de tejidos desvitalizados y el diferimiento de la fijación interna definitiva (RAFI) para un segundo tiempo una vez normalizada la respuesta inflamatoria.
+      * Ventajas: Minimiza el tiempo en quirófano inicial ($<30$ minutos por segmento), mitiga la pérdida hemática transoperatoria, evita el fenómeno de Second Hit y disminuye drásticamente el desarrollo de SDRA en el paciente crítico.
+      * Desventajas: Obliga a múltiples intervenciones quirúrgicas programadas, incrementa el riesgo de infección local en el trayecto de los pines del fijador externo y puede retrasar la rehabilitación funcional.
+      * Indicaciones Absolutas: Pacientes inestables o críticos que exhiban la Tríada Letal (Acidosis pH $<7.24$, Hipotermia $<35^{\circ}\text{C}$, Coagulopatía), trauma torácico contuso severo bilateral o ISS $>40$.
+      * Referencia Bibliográfica:
+      * Scalea, T. M., et al. (2000). Injuries to the resuscitation and treatment of shock: Damage control orthopedics: A strategy for the management of the patient with an open pelvic fracture. Journal of Orthopaedic Trauma, 14(7), 468-472.
+DIAPOSITIVA 18: Early Total Care (ETC) – Tratamiento Definitivo Temprano
+      * Conceptualización: Ejecución e instrumentación de la fijación interna rígida y definitiva (e.g., enclavado intramedular fresado de fémur, placas de compresión bloqueadas) de la totalidad de las fracturas óseas mayores en un único tiempo quirúrgico, llevado a cabo estrictamente dentro de las primeras 24 horas del ingreso.
+      * Ventajas: Reducción drástica de los días de hospitalización y costos, eliminación de fuentes de dolor óseo continuo, y movilización activa ultra-temprana fuera de cama (prevención de neumonía hipostática y eventos tromboembólicos).
+      * Desventajas Críticas: Induce un estrés metabólico e inflamatorio masivo. Altamente deletéreo si se aplica erróneamente en pacientes fisiológicamente inestables o limítrofes (Borderline).
+      * Indicación Absoluta: Exclusivo para pacientes catalogados como estables, caracterizados por normotermia central, ausencia de acidosis metabólica y coagulación intacta.
+      * Referencia Bibliográfica:
+      * Pape, H. C., et al. (2002). Effects of changing strategies of fracture fixation on immunologic changes and systemic complications in polytrauma patients. The Journal of Trauma, 52(1), 14-21.
+DIAPOSITIVA 19: Evidencia Clínica Basada en Datos – DCO frente a ETC
+      * Impacto del Cambio de Paradigma: El viraje hacia el DCO protocolizado en subgrupos de pacientes con criterios de inestabilidad sistémica modificó radicalmente los desenlaces de mortalidad pulmonar.
+      * Análisis Comparativo del Síndrome de Dificultad Respiratoria Aguda (SDRA / ARDS):
+      * Pacientes críticos con trauma mayor manejados con protocolos tradicionales de fijación total temprana (Early Total Care - ETC): Incidencia de ARDS del 54.6%.
+      * Pacientes críticos en las mismas condiciones fisiológicas manejados bajo la sistemática de Control de Daños Ortopédicos (Damage Control Orthopedics - DCO): Reducción drástica del ARDS a una tasa del 26.4%.
+      * Ponderación Operativa: El cirujano debe equilibrar el beneficio de supervivencia pulmonar del DCO frente al riesgo estadísticamente mayor de requerir procedimientos secundarios y tasas incrementadas de retraso de consolidación.
+      * Referencia Bibliográfica:
+      * Pape, H. C., et al. (2007). Impact of the method of initial stabilization for femoral shaft fractures in patients with multiple injuries: a randomized prospective study. Journal of Orthopaedic Trauma, 21(5), 293-299.
+DIAPOSITIVA 20: Protocolo EAC – Early Appropriate Care
+      * Definición de Consenso: Filosofía de manejo contemporánea que busca la fijación definitiva de fracturas inestables mayores (fémur, anillo pélvico, columna vertebral) dentro de una ventana de tiempo de las primeras 36 horas del evento, condicionado estrictamente al estatus fisiometabólico óptimo del paciente determinado por marcadores de laboratorio.
+      * Criterio Clínico y Umbral del Lactato (Stevens & Tejwani, 2024):
+      * Un nivel de lactato sérico $\le 2.5$ mmol/L se instituye como el indicador biológico definitivo de una adecuada reanimación tisular, autorizando al equipo quirúrgico a proceder con seguridad hacia la fijación interna definitiva dentro de las primeras 24-36 horas.
+      * Contraindicación: Si el valor de lactato sérico fracasa en descender por debajo del umbral de 2.5 mmol/L a pesar de una reanimación hídrica intensiva, se dicta que el estado es metabólicamente inestable, debiendo abortarse cualquier intento de ETC/EAC e implementar DCO de urgencia.
+      * Referencia Bibliográfica:
+      * Stevens, N. M., & Tejwani, N. C. (2024). Damage-control orthopedics or early total care: What you need to know. The Journal of Trauma and Acute Care Surgery, 96(5), 694–701.
+DIAPOSITIVA 21: Parámetros Clínicos de Éxito para Monitorizar la Resucitación
+      * Objetivo: Marco de referencia fisiológico multiorgánico obligatorio para guiar la conversión segura de fijación externa a osteosíntesis definitiva (apertura de la ventana inmunológica segura, usualmente a partir del día 6 a 8, evitando la ventana de peligro hiperinflamatoria de los días 2 a 5).
+      * Criterios del Estado "Estable" para Safe Definitive Surgery (SDS):
+      * Estabilidad Hemodinámica Homogénea: Presión arterial óptima sin requerimiento ni dependencia activa de fármacos vasopresores.
+      * Homeostasis Pulmonar: Presión parcial de oxígeno adecuada ($PaO_2/FiO_2 >300$ mmHg), ausencia de hipercapnia refractaria.
+      * Perfil Metabólico Normalizado: Concentración de lactato sérico central $< 2.5$ mmol/L de forma sostenida.
+      * Coagulación Funcional: Valores de INR normales ($<1.4$) o curvas estables en tromboelastografía.
+      * Control Térmico: Estado de normotermia central establecido (Temperatura corporal $> 36^{\circ}\text{C}$).
+      * Perfusión Renal Efectiva: Preservación de un gasto urinario fisiológico mayor a 1 mL/kg/hora.
+      * Referencia Bibliográfica:
+      * Polmear, M. M., Kakalecik, J., Croft, C., & Hagen, J. E. (2024). Early Care of Polytraumatized Patients: A Framework for Orthopaedic Surgeons. The Journal of the American Academy of Orthopaedic Surgeons (JAAOS), 32(8), 341-350.
+DIAPOSITIVA 22: Politrauma Pediátrico – Particularidades Fisiológicas
+      * Dimorfismo Cefálico: Proporción anatómica de la cabeza notablemente mayor en relación con el cuerpo, lo que incrementa la inercia biomecánica en mecanismos de desaceleración, aumentando el riesgo de TCE severo y lesiones de la columna cervical alta (C1-C3).
+      * Reserva y Compensación Cardiovascular: El sistema cardiovascular pediátrico posee mecanismos compensatorios sumamente eficientes (vasoconstricción periférica intensa y taquicardia refleja) capaces de mantener presiones arteriales sistólicas normales a pesar de pérdidas masivas de volemia (hasta el $30\%$). Tras agotarse esta reserva, desarrollan una descompensación hemodinámica abrupta y catastrófica en cascada.
+      * Fisiología Térmica: Alta relación superficie corporal total/masa. Presentan pérdida calórica acelerada por radiación, conduciendo rápidamente a hipotermia grave que inhibe la cascada enzimática de la coagulación.
+      * Dinámica de la Pared Torácica: Dada la elevada elasticidad y distensibilidad del cartílago costal infantil, pueden desarrollarse contusiones pulmonares masivas sin evidencia de fracturas costales estructurales.
+      * Referencia Bibliográfica:
+      * American College of Surgeons Committee on Trauma. (2018). Advanced Trauma Life Support (ATLS®) Student Course Manual (10th ed.). Chicago: American College of Surgeons.
+DIAPOSITIVA 23: Politrauma Pediátrico – Manejo Técnico y Complicaciones Ortopédicas
+      * Complicaciones Ortopédicas de Alta Morbilidad:
+      * Desarrollo de Síndrome Compartimental Agudo (complejo e infradiagnosticado clínicamente en niños pequeños; requiere un alto índice de sospecha basado en agitación psicomotriz y requerimientos de analgesia en aumento).
+      * Arresto o detención focal del crecimiento longitudinal por daño directo o isquemia de la placa fisaria (Fisis).
+      * Guías de Estabilización Mecánica de Acuerdo con el Segmento Óseo:
+      * Huesos Largos (Fémur / Tibia): Preferencia de uso de sistemas de Clavos Intramedulares Flexibles de Titanio (TEN) o fijadores externos biológicos supraacetabulares/diafisarios con el fin de respetar rigurosamente la biología local y evitar lesiones yatrogénicas de los cartílagos de crecimiento.
+      * Huesos Pequeños o Fragmentos Metaepifisarios: Abordaje preferente mediante Agujas de Kirschner (K-Wires).
+      * Advertencia Crítica: Queda estrictamente contraindicado el uso de inmovilizaciones rígidas prolongadas que condicionen puntos de presión sostenida sobre la delicada piel pediátrica hipoperfundida.
+      * Referencia Bibliográfica:
+      * Flynn, J. M., Choi, P. D., & Skaggs, D. L. (2024). Rockwood and Wilkins' Fractures in Children (9th ed.). Philadelphia: Wolters Kluwer.
+DIAPOSITIVA 24: Lesiones Asociadas al Sitio de Fractura – Coexistencia de Fractura y Quemadura
+      * Evidencia Científica Contemporánea: La fijación interna rígida y ultra-temprana de fracturas en segmentos con quemaduras cutáneas asociadas demuestra una correlación directa con tasas significativamente superiores de consolidación ósea y una reducción marcada de complicaciones infecciosas y sistémicas generalizadas, rompiendo el mito de diferir la cirugía por el tejido quemado.
+      * Protocolo de Abordaje Quirúrgico en Lesiones Co-localizadas (Fractura debajo de Piel Quemada):
+      * Efectuar un lavado y asepsia mecánica quirúrgica inicial de la zona utilizando Gluconato de Clorhexidina al porcentaje estándar.
+      * Realizar la eliminación y desbridamiento quirúrgico minucioso de la escara necrótica superficial antes de la realización de la incisión quirúrgica.
+      * Proceder inmediatamente con la instrumentación y estabilización rígida de la fractura ósea mediante osteosíntesis interna rígida dentro de las primeras 48 horas.
+      * Referencia Bibliográfica:
+      * Wise, C. P. M., Ivanko, A., Vander Voort, C. W. D., Lee, M. A., & Palmieri, T. L. (2024). Femur fractures in burn patients: A 22-year case series. Burns Open, 8(2), 75-81.
+DIAPOSITIVA 25: Principios Quirúrgicos Avanzados y Manejo Postoperatorio en Quemaduras
+      * Axioma Técnico Supremo: La consecución de una fijación mecánica interna mecánicamente estable y rígida posee una prioridad biológica y reconstructiva sustancialmente superior a la ubicación geométrica de la incisión cutánea respecto a los límites de la quemadura.
+      * Estrategia de Cobertura Cutánea Post-Fijación: Concluida la síntesis ósea, se aplica de forma tópica el uso de aloinjertos biológicos asociados a apósitos impregnados con soluciones antimicrobianas directamente sobre el tejido expuesto a modo de cierre temporal eficaz.
+      * Reconstrucción Cutánea Definitiva: Programación y colocación de autoinjertos cutáneos definitivos en un periodo óptimo comprendido entre los 7 y 10 días posteriores a la cirugía ortopédica.
+      * Profilaxis contra Osificación Heterotópica (OH): Pacientes con fracturas de fémur concurrentes con quemaduras que abarquen una Superficie Corporal Total afectada $\ge 20\%$ (TBSA) se benefician críticamente del uso de esquemas profilácticos dirigidos mediante ciclos breves de radioterapia local focalizada a dosis bajas o el uso protocolizado de indometacina/AINEs.
+      * Referencia Bibliográfica:
+      * Wise, C. P. M., Ivanko, A., Vander Voort, C. W. D., Lee, M. A., & Palmieri, T. L. (2024). Femur fractures in burn patients: A 22-year case series. Burns Open, 8(2), 75-81.
+DIAPOSITIVA 26: Evidencia Histórica y Validación del Manejo Precoz (Evans, 1966)
+      * Referencia Clásica de Impacto Histórico: Evans, E. Burke. (1966). Orthopaedic Measures in the Treatment of Severe Burns. The Journal of Bone & Joint Surgery (JBJS), 48(4), 643-669.
+      * Conclusiones Científicas Fundamentales:
+      * Las heridas y escaras secundarias a lesiones por quemaduras agudas permanecen biológicamente estériles de forma constante durante las primeras cuarenta y ocho (48) horas posteriores al insulto térmico inicial.
+      * La Reducción Abierta y Fijación Interna (RAFI / ORIF) en pacientes críticamente quemados puede ser ejecutada con un perfil de seguridad sumamente elevado, condicionado exclusivamente a lograr la estabilización hemodinámica y reanimación metabólica previa del enfermo.
+      * La ejecución de una RAFI dentro de las primeras 48 horas post-lesión —en combinación con una reanimación hídrica agresiva— resulta significativamente más segura y asocia menores tasas de sepsis local e infección profunda en comparación con retrasar el procedimiento hacia una fijación diferida tardía (donde la piel ya ha sido colonizada por patógenos nosocomiales).
+      * Referencia Bibliográfica:
+      * Evans, E. Burke. (1966). Orthopaedic Measures in the Treatment of Severe Burns. The Journal of Bone & Joint Surgery (JBJS), 48(4), 643-669.
+DIAPOSITIVA 27: Bibliografía y Literatura Científica de Alta Especialidad (Resumen General)
+      * Referencia Bibliográfica:
+      1. Tornetta, P., III, Ricci, W. M., Ostrum, R. F., McKee, M. D., Ollivere, B. J., & de Ridder, V. A. (2025). Rockwood and Green's Fractures in Adults (10th ed.). Lippincott Williams & Wilkins.
+      2. American College of Surgeons Committee on Trauma. (2018). Advanced Trauma Life Support (ATLS®) Student Course Manual (10th ed.). Chicago: American College of Surgeons.
+      3. Beltran, M. J., Becker, T. E., Hurley, R. K., Gurney, J. M., & Hayda, R. A. (2016). Resuscitation and Treatment of Shock. Journal of Orthopaedic Trauma, 30(Suppl 3), S2–S6.
+      4. Stevens, N. M., & Tejwani, N. C. (2024). Damage-control orthopedics or early total care: What you need to know. The Journal of Trauma and Acute Care Surgery, 96(5), 694–701.
+      5. Polmear, M. M., Kakalecik, J., Croft, C., & Hagen, J. E. (2024). Early Care of Polytraumatized Patients: A Framework for Orthopaedic Surgeons. The Journal of the American Academy of Orthopaedic Surgeons (JAAOS), 32(8), 341-350.
+      6. Wise, C. P. M., Ivanko, A., Vander Voort, C. W. D., Lee, M. A., & Palmieri, T. L. (2024). Femur fractures in burn patients: A 22-year case series. Burns Open, 8(2), 75-81.
+      7. Evans, E. Burke. (1966). Orthopaedic Measures in the Treatment of Severe Burns. The Journal of Bone & Joint Surgery (JBJS), 48(4), 643-669.

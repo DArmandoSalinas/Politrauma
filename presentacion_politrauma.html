@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evaluación y manejo en pacientes politrauma</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f6f8fb;
+    --bg-alt:#eef2f7;
+    --navy:#0c2340;
+    --navy-mid:#1e3a5f;
+    --accent:#1a5f9e;
+    --accent-dark:#143d66;
+    --accent-soft:#e8f0f8;
+    --text:#1e293b;
+    --text-soft:#475569;
+    --muted:#64748b;
+    --line:#cbd5e1;
+    --line-soft:#e2e8f0;
+    --white:#ffffff;
+    --warn:#9a3412;
+    --warn-bg:#fff7ed;
+    --warn-line:#fdba74;
+    --good:#166534;
+    --good-bg:#f0fdf4;
+    --good-line:#86efac;
+    --display:Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --body:Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --mono:Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --slide-x:72px;
+    --slide-top:56px;
+    --slide-ref-h:68px;
+    --slide-bottom:96px;
+  }
+
+  html,body{background:var(--bg-soft);}
+
+  .reveal{
+    font-family:var(--body);
+    font-size:32px;
+    color:var(--text);
+    font-weight:400;
+    letter-spacing:0;
+  }
+
+  /* Fondo limpio — estilo conferencia académica */
+  .reveal .backgrounds,
+  .reveal-viewport{
+    background:linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  }
+  .reveal-viewport::after{ display:none; }
+
+  .reveal .slides{ text-align:left; }
+  .reveal .slides > section,
+  .reveal .slides > section > section{
+    height:100%;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* ── Layout frame ── */
+  .slidewrap,
+  .cover{
+    position:relative;
+    flex:1 1 auto;
+    width:100%;
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:var(--slide-top) var(--slide-x) var(--slide-bottom);
+    box-sizing:border-box;
+  }
+  .slidewrap::before,
+  .cover::before{
+    content:"";
+    position:absolute;top:0;left:0;right:0;height:4px;
+    background:var(--accent);
+  }
+
+  /* Diapositivas sin h2: bajar contenido (no pegado arriba) */
+  .slidewrap:not(:has(h2)){
+    justify-content:flex-start;
+    padding-top:76px;
+  }
+  .slidewrap:not(:has(h2)):not(:has(.kicker)){
+    padding-top:92px;
+  }
+
+  /* Diapositivas con título principal: centrado óptico sobre el pie */
+  .slidewrap:has(h2){
+    justify-content:center;
+    padding-top:52px;
+  }
+
+  /* Banda de encabezado consistente cuando hay kicker + h2 */
+  .slidewrap:has(.kicker):has(h2) .kicker{ margin-bottom:.55em; }
+  .slidewrap:has(.kicker):has(h2) h2{ margin-bottom:.5em; }
+  .slidewrap:has(.kicker):not(:has(h2)) .kicker{
+    margin-bottom:1em;
+    font-size:.48em;
+    letter-spacing:.16em;
+  }
+
+  /* Headings */
+  .reveal h1,.reveal h2,.reveal h3{
+    font-family:var(--display);
+    color:var(--navy);
+    font-weight:700;
+    line-height:1.14;
+    letter-spacing:0;
+    text-transform:none;
+    margin:0 0 .4em;
+    text-shadow:none;
+  }
+  .reveal h2{ font-size:1.42em; margin-bottom:.45em; }
+  .reveal h3{ font-size:1em; color:var(--navy-mid); font-weight:700; font-family:var(--display); }
+
+  /* Kicker / section eyebrow */
+  .kicker{
+    font-family:var(--mono);
+    font-size:.44em;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex;align-items:center;gap:.8em;
+    margin-bottom:.85em;
+  }
+  .kicker::before{
+    content:"";width:36px;height:2px;flex:0 0 auto;background:var(--accent);
+  }
+
+  /* Body text */
+  .reveal p,.reveal li{ line-height:1.5; font-weight:400; color:var(--text); }
+  .reveal strong{ color:var(--navy); font-weight:700; }
+  .reveal em{ color:var(--accent-dark); font-style:italic; font-weight:400; font-family:var(--body); }
+
+  .reveal ul{ list-style:none; margin:0; padding:0; }
+  .reveal ul li{
+    position:relative;
+    padding-left:1.3em;
+    margin:.55em 0;
+  }
+  .reveal ul li::before{
+    content:"";
+    position:absolute;left:0;top:.62em;
+    width:.35em;height:.35em;border-radius:50%;
+    background:var(--accent);
+    box-shadow:none;
+  }
+  .reveal ul ul{ margin:.25em 0 .4em; }
+  .reveal ul ul li{ font-size:.88em; color:var(--text-soft); margin:.32em 0; }
+  .reveal ul ul li::before{
+    width:.45em;height:2px;border-radius:0;top:.72em;background:var(--accent);box-shadow:none;
+  }
+
+  .lead{ color:var(--text-soft); line-height:1.5; margin:0 0 .7em; }
+
+  /* Reference footer — misma altura en todas las diapositivas */
+  .ref{
+    position:absolute;
+    left:var(--slide-x);
+    right:var(--slide-x);
+    bottom:22px;
+    min-height:var(--slide-ref-h);
+    font-family:var(--body);
+    font-size:.42em;
+    line-height:1.4;
+    color:var(--muted);
+    padding-top:.85em;
+    border-top:1px solid var(--line);
+    display:flex;
+    gap:.7em;
+    align-items:flex-start;
+    box-sizing:border-box;
+  }
+  .ref svg{ flex:0 0 auto;margin-top:.15em;opacity:.85; stroke:var(--accent); }
+  .ref ol{ margin:0;padding-left:1.4em; columns:1; }
+  .ref.cols ol{ columns:2; column-gap:2.2em; }
+  .ref li{ margin:.12em 0; }
+
+  /* Slide number */
+  .reveal .slide-number{
+    font-family:var(--mono);
+    background:transparent;
+    color:var(--muted);
+    font-size:14px;
+    letter-spacing:.08em;
+    right:var(--slide-x);
+    bottom:26px;
+  }
+
+  /* Cards / two-column */
+  .grid2{ display:grid;grid-template-columns:1fr 1fr;gap:1.25em;align-items:start; }
+  .grid2 > *{ min-width:0; }
+  .card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:1em 1.15em;
+    box-shadow:0 1px 3px rgba(15,35,64,.06);
+  }
+  .card + .card{ margin-top:.7em; }
+  .card h3{ margin-bottom:.45em; font-family:var(--display);font-weight:700;font-size:.78em;color:var(--accent);letter-spacing:0; }
+  .card.warn{ border-color:var(--warn-line); background:var(--warn-bg); }
+  .card.warn h3{ color:var(--warn); }
+  .card.good{ border-color:var(--good-line); background:var(--good-bg); }
+  .card.good h3{ color:var(--good); }
+  .card ul li{ margin:.4em 0; }
+
+  /* Tables */
+  .reveal table{ width:100%;border-collapse:collapse;font-size:.6em;margin-top:.3em; }
+  .reveal table th,.reveal table td{
+    border:1px solid var(--line-soft);
+    padding:.62em .7em;text-align:center;
+  }
+  .reveal table thead th{
+    font-family:var(--mono);font-size:.92em;letter-spacing:.02em;text-transform:uppercase;
+    color:var(--white);font-weight:700;
+    background:var(--navy);
+    border-color:var(--navy);
+  }
+  .reveal table tbody th{
+    text-align:left;color:var(--navy);font-weight:600;font-family:var(--body);
+    background:var(--accent-soft);
+  }
+  .reveal table tbody tr:nth-child(even) td{ background:var(--bg-soft); }
+  .reveal table td:last-child{ color:var(--navy);font-weight:600; }
+
+  .mono{ font-family:var(--mono);color:var(--accent);font-weight:600; }
+  .stat{ font-family:var(--display);font-weight:700;color:var(--navy);line-height:1.05;letter-spacing:0; }
+  .statlabel{ font-family:var(--mono);font-size:.5em;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;line-height:1.4; }
+
+  /* ---------- Title slide ---------- */
+  .cover .badge{
+    font-family:var(--mono);font-size:.44em;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--line);border-radius:4px;
+    padding:.6em 1.2em;align-self:flex-start;margin-bottom:1.1em;
+    background:var(--accent-soft);
+  }
+  .cover h1{
+    font-family:var(--display);
+    font-size:2.5em;font-weight:700;line-height:1.08;letter-spacing:0;
+    color:var(--navy);
+    margin:0 0 .2em;
+    max-width:21ch;
+  }
+  .cover .sub{ font-size:.66em;color:var(--text-soft);max-width:52ch;margin-bottom:0;font-weight:400;line-height:1.55; }
+  .cover .meta{ display:flex;flex-wrap:wrap;gap:1em 2.6em;font-size:.5em;color:var(--muted); }
+  .cover .meta b{ color:var(--navy);font-weight:700;display:block;font-size:1.18em;font-family:var(--body);margin-top:.15em; }
+  .cover .meta .k{ font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;font-size:.82em;color:var(--accent); }
+  .cover .rule{ height:2px;width:120px;background:var(--accent);margin:1.4em 0; }
+
+  .institutions{
+    position:absolute;top:30px;right:72px;text-align:right;z-index:3;
+    font-family:var(--mono);font-size:.42em;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;line-height:1.7;
+  }
+
+  /* Diagrama temario — timeline completo */
+  .temario-diagram{
+    width:100%;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--white);
+    padding:.85em 1em .85em .75em;
+    box-sizing:border-box;
+  }
+  .temario-flow{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:.42em;
+    margin:0;
+    padding:0 0 0 1.6em;
+    list-style:none;
+  }
+  .temario-flow::before{
+    content:"";
+    position:absolute;
+    left:.55em;
+    top:.9em;
+    bottom:.9em;
+    width:2px;
+    background:var(--line);
+  }
+  .temario-step{
+    display:grid;
+    grid-template-columns:1.5em 1fr;
+    gap:.65em;
+    align-items:start;
+  }
+  .temario-num{
+    width:1.5em;
+    height:1.5em;
+    margin-top:.35em;
+    border-radius:50%;
+    background:var(--accent);
+    color:var(--white);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:.48em;
+    font-weight:700;
+    position:relative;
+    z-index:1;
+    flex-shrink:0;
+  }
+  .temario-body{
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:.5em .75em;
+    font-size:.54em;
+    line-height:1.45;
+    color:var(--text);
+    background:var(--white);
+  }
+  .temario-body em{ font-style:italic; color:var(--accent-dark); }
+  .reveal .temario-flow li{ margin:0; padding:0; }
+  .reveal .temario-flow li::before{ display:none; }
+
+  /* Imágenes clínicas en diapositivas */
+  .slide-fig{
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:.55em;
+    box-sizing:border-box;
+    overflow:hidden;
+  }
+  .slide-fig img{
+    display:block;
+    width:100%;
+    max-height:300px;
+    object-fit:contain;
+    border:none;
+    border-radius:2px;
+    background:transparent;
+  }
+  .slide-figs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1em;
+    margin-top:.6em;
+  }
+  .slide-figs .slide-fig{ padding:.45em; }
+  .slide-figs .slide-fig img{ max-height:220px; }
+
+  /* Slide 17 · imagen vertical (1.jpg — fijador externo) */
+  .reveal .slides > section:nth-child(17) .grid2{
+    grid-template-columns:1.08fr .92fr;
+    align-items:stretch;
+    gap:1.1em;
+  }
+  .reveal .slides > section:nth-child(17) .slide-fig{
+    align-self:stretch;
+    min-height:320px;
+    max-height:400px;
+    padding:.35em .5em;
+  }
+  .reveal .slides > section:nth-child(17) .slide-fig img{
+    width:auto;
+    max-width:100%;
+    height:100%;
+    max-height:380px;
+    min-height:0;
+    object-fit:contain;
+    object-position:center center;
+  }
+  .reveal .slides > section:nth-child(17) .grid2 > div:first-child{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  /* Imágenes en slides 16 y 18 */
+  .reveal .slides > section:nth-child(16) .slide-fig img,
+  .reveal .slides > section:nth-child(18) .slide-fig img{
+    max-height:340px;
+  }
+
+  /* Barra de herramientas: presentación y zoom */
+  #pres-toolbar{
+    position:fixed;top:14px;right:14px;z-index:70;
+    display:flex;gap:6px;align-items:center;
+    font-family:var(--mono);font-size:12px;
+  }
+  #pres-toolbar button{
+    font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0;
+    color:var(--navy);background:var(--white);
+    border:1px solid var(--line);border-radius:4px;
+    padding:7px 11px;cursor:pointer;
+    transition:background .2s,border-color .2s;
+    box-shadow:0 1px 2px rgba(15,35,64,.08);
+  }
+  #pres-toolbar button:hover{
+    background:var(--accent-soft);border-color:var(--accent);
+  }
+  #pres-toolbar button.active{
+    background:var(--accent);border-color:var(--accent);color:var(--white);
+  }
+  #pres-toolbar .sep{
+    width:1px;height:22px;background:var(--line);margin:0 2px;
+  }
+
+  /* zoom hint */
+  #zoomhint{
+    position:fixed;bottom:14px;left:18px;z-index:60;
+    font-family:var(--mono);font-size:12px;letter-spacing:0;color:var(--muted);
+    background:var(--white);border:1px solid var(--line);border-radius:4px;
+    padding:7px 12px;transition:opacity .6s ease;line-height:1.5;
+    box-shadow:0 1px 3px rgba(15,35,64,.08);
+  }
+  body.presentation-mode #pres-toolbar{ top:10px;right:10px; }
+  body.presentation-mode #zoomhint{ opacity:.85 !important; }
+  #zoomhint b{ color:var(--accent); }
+  #zoomhint kbd{ font-family:var(--mono);background:var(--accent-soft);border:1px solid var(--line);border-radius:3px;padding:1px 6px;color:var(--navy); }
+
+  .reveal section.zoomed > *{ transition:transform .45s cubic-bezier(.2,.7,.2,1); }
+
+  /* Sin animaciones en texto — todo visible de inmediato */
+  .reveal .slides section .fragment{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+    animation:none !important;
+  }
+
+  /* Sin decoración animada — fondo limpio para conferencia */
+  #bg-drawings{ display:none; }
+
+  .reveal-viewport{ position:relative; z-index:1; }
+
+  /* Controles reveal.js acordes al tema claro */
+  .reveal .controls{ color:var(--accent); }
+  .reveal .progress{ background:rgba(15,35,64,.08); color:var(--accent); height:4px; }
+  .reveal .slides > section{
+    background:var(--bg);
+    box-sizing:border-box;
+  }
+  .cover .meta > div{
+    padding-right:1em;
+    border-left:2px solid var(--line-soft);
+    padding-left:1em;
+  }
+  .cover .meta > div:first-child{ border-left:none; padding-left:0; }
+
+  @media (max-width:700px){ .grid2{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<!-- Dibujos de fondo con movimiento (no afectan al texto) -->
+<div id="bg-drawings" aria-hidden="true">
+  <!-- Fémur estilizado -->
+  <svg class="draw-bone" viewBox="0 0 120 280" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-width="1.8" d="M60 20 C45 20 38 35 38 52 C38 68 48 78 58 82 L52 110 C40 118 32 138 32 162 C32 188 42 210 48 228 L44 252 C42 262 48 270 60 272 C72 270 78 262 76 252 L72 228 C78 210 88 188 88 162 C88 138 80 118 68 110 L62 82 C72 78 82 68 82 52 C82 35 75 20 60 20 Z"/>
+    <ellipse class="fill-soft" cx="60" cy="48" rx="18" ry="22"/>
+    <ellipse class="fill-soft" cx="60" cy="248" rx="16" ry="18"/>
+  </svg>
+  <!-- Columna vertebral -->
+  <svg class="draw-spine" viewBox="0 0 60 220" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-width="1.5" d="M30 10 C22 10 18 18 18 28 L18 192 C18 202 22 210 30 210 C38 210 42 202 42 192 L42 28 C42 18 38 10 30 10"/>
+    <rect x="14" y="32" width="32" height="14" rx="4" stroke-width="1.2"/>
+    <rect x="14" y="58" width="32" height="14" rx="4" stroke-width="1.2"/>
+    <rect x="14" y="84" width="32" height="14" rx="4" stroke-width="1.2"/>
+    <rect x="14" y="110" width="32" height="14" rx="4" stroke-width="1.2"/>
+    <rect x="14" y="136" width="32" height="14" rx="4" stroke-width="1.2"/>
+    <rect x="14" y="162" width="32" height="14" rx="4" stroke-width="1.2"/>
+  </svg>
+  <!-- Anillo pélvico -->
+  <svg class="draw-pelvis" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-width="1.6" d="M100 20 C60 20 30 42 24 72 C18 98 38 118 68 124 L68 132 C68 136 72 138 76 138 L124 138 C128 138 132 136 132 132 L132 124 C162 118 182 98 176 72 C170 42 140 20 100 20"/>
+    <path stroke-width="1.2" d="M76 138 L76 118 M124 138 L124 118"/>
+    <ellipse class="fill-soft" cx="100" cy="78" rx="28" ry="22"/>
+  </svg>
+  <!-- Línea ECG -->
+  <svg class="draw-ecg" viewBox="0 0 1280 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 60 H120 L140 60 L155 20 L175 95 L190 60 L320 60 L340 60 L358 38 L378 82 L395 60 L520 60 L540 60 L555 18 L575 98 L590 60 L720 60 L740 60 L758 35 L778 88 L795 60 L920 60 L940 60 L955 22 L975 92 L990 60 L1120 60 L1140 60 L1158 40 L1178 85 L1195 60 L1280 60"/>
+  </svg>
+  <!-- Cruz médica -->
+  <svg class="draw-cross" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+    <rect x="28" y="10" width="14" height="50" rx="3" stroke-width="1.5"/>
+    <rect x="10" y="28" width="50" height="14" rx="3" stroke-width="1.5"/>
+  </svg>
+  <!-- Órbita decorativa -->
+  <svg class="draw-orbit" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="260" cy="260" r="200"/>
+    <circle cx="260" cy="260" r="140"/>
+    <circle cx="260" cy="260" r="80"/>
+  </svg>
+</div>
+
+<div id="pres-toolbar">
+  <button id="btn-present" type="button" title="Pantalla completa (P)">Modo presentación</button>
+  <span class="sep"></span>
+  <button id="btn-zoom-out" type="button" title="Alejar (Ctrl −)">−</button>
+  <button id="btn-zoom-in" type="button" title="Acercar (Ctrl +)">+</button>
+</div>
+
+<div id="zoomhint">Modo presentación: botón arriba o tecla <kbd>P</kbd> · Zoom: <kbd>Ctrl</kbd>+<kbd>+</kbd> / <kbd>Ctrl</kbd>+<kbd>−</kbd> · Salir: <kbd>Esc</kbd></div>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 · Portada -->
+    <section>
+      <div class="institutions">CHRISTUS MUGUERZA<br>UDEM · Sistema de Salud</div>
+      <div class="cover">
+        <span class="badge">Curso Anual de Residentes Muguerza</span>
+        <h1>Evaluación y manejo del paciente politrauma</h1>
+        <p class="sub">Servicio de Traumatología y Ortopedía · Sesión académica basada en el Core Curriculum OTA y el protocolo ATLS&reg; 10.ª edición.</p>
+        <div class="rule"></div>
+        <div class="meta">
+          <div><span class="k">Ponente</span><b>Dr. Manuel Antonio Salinas Lugo</b>R4 Traumatología y Ortopedía</div>
+          <div><span class="k">Asesor</span><b>Dr. Alberto Padilla Dieste</b>Asesor de la sesión</div>
+          <div><span class="k">Fecha</span><b>03 de Junio de 2026</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · Organización -->
+    <section>
+      <div class="slidewrap">
+        <div class="grid2" style="margin-top:.6em">
+          <div class="card">
+            <h3>Sede de alta especialidad</h3>
+            <p style="font-size:.82em;margin:0">Hospital Christus Muguerza Alta Especialidad.</p>
+          </div>
+          <div class="card">
+            <h3>Profesores del curso</h3>
+            <ul style="font-size:.82em">
+              <li>Jefe de Traumatología y Ortopedía:<br><strong>Dr. Armando de la Fuente Flores</strong></li>
+              <li>Profesor adjunto del programa:<br><strong>Dr. Luis Andrés Valverde Galindo</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · Temario -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Estructura temática de la sesión</div>
+        <div class="temario-diagram" aria-label="Esquema temático de la sesión">
+          <ol class="temario-flow">
+            <li class="temario-step">
+              <span class="temario-num">1</span>
+              <div class="temario-body">Introducción y conceptualización del paciente politraumatizado.</div>
+            </li>
+            <li class="temario-step">
+              <span class="temario-num">2</span>
+              <div class="temario-body">Protocolo <em>ATLS&reg; 10.ª edición</em> — evaluación primaria, secundaria y terciaria.</div>
+            </li>
+            <li class="temario-step">
+              <span class="temario-num">3</span>
+              <div class="temario-body">Escalas de severidad e índices anatómico-fisiológicos (<em>ISS vs. NISS</em>).</div>
+            </li>
+            <li class="temario-step">
+              <span class="temario-num">4</span>
+              <div class="temario-body">Tiempos quirúrgicos, ventanas de oportunidad y <em>Second Hit</em>.</div>
+            </li>
+            <li class="temario-step">
+              <span class="temario-num">5</span>
+              <div class="temario-body">Control de daños: <em>DCO</em> frente a <em>ETC</em> y <em>EAC</em>.</div>
+            </li>
+            <li class="temario-step">
+              <span class="temario-num">6</span>
+              <div class="temario-body">Particularidades del paciente pediátrico politraumatizado.</div>
+            </li>
+            <li class="temario-step">
+              <span class="temario-num">7</span>
+              <div class="temario-body">Lesiones asociadas complejas (fracturas concurrentes con quemaduras).</div>
+            </li>
+          </ol>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Core Curriculum de la Orthopaedic Trauma Association (OTA) para la Formación de Especialistas en Trauma Músculo-esquelético Mayor, 2024-2025.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · Introducción -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Introducción · rol crítico de la ortopedía</div>
+        <div class="grid2" style="font-size:.72em">
+          <div>
+            <ul>
+              <li><strong>Paciente politraumatizado:</strong> lesiones múltiples que comprometen, simultánea o secuencialmente, ≥2 sistemas orgánicos, con amenaza directa para la vida.</li>
+              <li><strong>Papel del ortopedista:</strong> intervención obligatoria desde la reanimación inicial — estabilización provisional de fracturas inestables y control del sangrado masivo músculo-esquelético.</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><strong>Evidencia:</strong> la intervención ortopédica protocolizada y temprana optimiza resultados a largo plazo y reduce estancia en UCI y hospitalización.</li>
+            </ul>
+            <div class="card good" style="margin-top:.5em">
+              <h3>Criterio de gravedad operativo</h3>
+              <span class="stat" style="font-size:1.9em">ISS &gt; 16</span>
+            </div>
+          </div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Tornetta, P., III, Ricci, W. M., Ostrum, R. F., McKee, M. D., Ollivere, B. J., &amp; de Ridder, V. A. (2025). <em>Rockwood and Green's Fractures in Adults</em> (10th ed.). Lippincott Williams &amp; Wilkins.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · ATLS evaluación primaria -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">ATLS&reg; 10.ª edición · evaluación primaria</div>
+        <h2>Estrategia unificada <span class="mono">C-ABCDE</span></h2>
+        <ul style="font-size:.74em">
+          <li><strong>C</strong> · <em>Catastrophic Hemorrhage</em> — control inmediato de hemorragias externas sangrantes masivas (torniquete/compresión) antes de la vía aérea.</li>
+          <li><strong>A</strong> · <em>Airway</em> — vía aérea avanzada con control estricto y estabilización de columna cervical.</li>
+          <li><strong>B</strong> · <em>Breathing</em> — mecánica respiratoria, ventilación y O₂; exclusión de neumotórax a tensión (clínica / E-FAST).</li>
+          <li><strong>C</strong> · <em>Circulation</em> — estado hemodinámico y reanimación intravascular dirigida.</li>
+          <li><strong>D</strong> · <em>Disability</em> — estado neurológico mediante Glasgow y reactividad pupilar.</li>
+          <li><strong>E</strong> · <em>Exposure</em> — exposición completa con control de temperatura y prevención de hipotermia.</li>
+        </ul>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>American College of Surgeons Committee on Trauma. (2018). <em>Advanced Trauma Life Support (ATLS&reg;) Student Course Manual</em> (10th ed.). Chicago: American College of Surgeons.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · Clasificación shock -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">ATLS&reg; · diferenciación del shock hemorrágico</div>
+        <h2>Clasificación de la hemorragia</h2>
+        <p class="lead" style="font-size:.64em;max-width:64ch">Discriminar de forma inmediata el shock hemorrágico del neurogénico, obstructivo y cardiogénico.</p>
+        <table>
+          <thead><tr><th>Parámetro</th><th>Clase I</th><th>Clase II</th><th>Clase III</th><th>Clase IV</th></tr></thead>
+          <tbody>
+            <tr><th>Pérdida de sangre</th><td>&lt; 15%</td><td>15–30%</td><td>30–40%</td><td>&gt; 40%</td></tr>
+            <tr><th>Frecuencia cardiaca</th><td>Normal</td><td>&gt; 100 lpm</td><td>&gt; 120 lpm</td><td>&gt; 140 lpm</td></tr>
+            <tr><th>Presión arterial</th><td>Normal</td><td>Normal</td><td>Disminuida</td><td>Disminuida</td></tr>
+            <tr><th>pH sistémico</th><td>Normal</td><td>Normal</td><td>Disminuido</td><td>Disminuido</td></tr>
+            <tr><th>Estado mental</th><td>Ansioso</td><td>Confundido</td><td>Letárgico</td><td>Letargo / Coma</td></tr>
+            <tr><th>Tratamiento inicial</th><td>Cristaloides</td><td>Cristaloides</td><td>Líquidos + Sangre</td><td>Líquidos + Sangre</td></tr>
+          </tbody>
+        </table>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>American College of Surgeons Committee on Trauma. (2018). <em>Advanced Trauma Life Support (ATLS&reg;) Student Course Manual</em> (10th ed.). Chicago: American College of Surgeons.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · No respondedor -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">ATLS&reg; · no respondedor a cristaloides</div>
+        <h2>Falla en la respuesta a fluidos</h2>
+        <ul style="font-size:.74em">
+          <li><strong>Falla de respuesta:</strong> respuesta transitoria o nula a la carga de cristaloides se correlaciona con hemorragia <em>Clase III–IV</em> (&gt; 1500 mL o 30–40% del volumen circulante).</li>
+          <li><strong>Conducta inmediata:</strong> cese de cristaloides para evitar coagulopatía dilucional y activación del Protocolo de Transfusión Masiva (PTM).</li>
+          <li><strong>Logística de infusión:</strong> según premura y disponibilidad — sangre con pruebas cruzadas, sangre tipo-específica ABO/Rh, o O negativo universal (O positivo en varones o mujeres posmenopáusicas).</li>
+        </ul>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Beltran, M. J., Becker, T. E., Hurley, R. K., Gurney, J. M., &amp; Hayda, R. A. (2016). Resuscitation and Treatment of Shock. <em>Journal of Orthopaedic Trauma, 30</em>(Suppl 3), S2–S6.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · Optimización circulatoria tabla -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">ATLS&reg; · optimización circulatoria</div>
+        <h2>Pérdida hemática &amp; parámetros</h2>
+        <p class="lead" style="font-size:.64em;max-width:64ch">Restaurar la perfusión microvascular y oxigenación tisular limitando el bolo inicial a <em>1 litro</em> en adultos.</p>
+        <table>
+          <thead><tr><th>Variable</th><th>Clase 1</th><th>Clase 2</th><th>Clase 3</th><th>Clase 4</th></tr></thead>
+          <tbody>
+            <tr><th>Pérdida de sangre (mL)</th><td>Hasta 750</td><td>750–1500</td><td>1500–2000</td><td>&gt; 2000</td></tr>
+            <tr><th>Frecuencia cardiaca</th><td>&lt; 100</td><td>100–120</td><td>120–140</td><td>&gt; 140</td></tr>
+            <tr><th>Presión arterial</th><td>Normal</td><td>Normal</td><td>Disminuida</td><td>Disminuida</td></tr>
+            <tr><th>Presión de pulso</th><td>Normal</td><td>Disminuida</td><td>Disminuida</td><td>Disminuida</td></tr>
+            <tr><th>Frecuencia respiratoria</th><td>14–20</td><td>20–30</td><td>30–40</td><td>&gt; 35</td></tr>
+            <tr><th>Gasto urinario (mL/h)</th><td>&gt; 30</td><td>20–30</td><td>5–15</td><td>Despreciable</td></tr>
+          </tbody>
+        </table>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>American College of Surgeons Committee on Trauma. (2018). <em>Advanced Trauma Life Support (ATLS&reg;) Student Course Manual</em> (10th ed.). Chicago: American College of Surgeons.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · Damage Control Resuscitation -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Damage Control Resuscitation</div>
+        <h2>Resucitación con control de daños</h2>
+        <div class="grid2" style="font-size:.72em">
+          <div>
+            <ul>
+              <li><strong>Indicación:</strong> respuesta inestable/nula a fluidos con choque profundo por trauma músculo-esquelético mayor (fémur bilateral, pelvis inestable).</li>
+              <li><strong>Transfusión balanceada:</strong> se limita el cristaloide y se instituye PTM con relación <em>1:1:1</em>.</li>
+              <li><strong>Diamante de la muerte:</strong> reposición activa de Calcio iónico (&gt; 0.9 mmol/L) por quelación del citrato.</li>
+            </ul>
+          </div>
+          <div class="card good">
+            <h3>Protocolo 1:1:1</h3>
+            <ul style="font-size:.86em">
+              <li>1 U Concentrado de eritrocitos (pRBC)</li>
+              <li>1 U Plasma fresco congelado (factores de coagulación)</li>
+              <li>1 U Plaquetas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Holcomb, J. B., et al. (2015). Transfusion of plasma, platelets, and red blood cells in a 1:1:1 vs a 1:1:2 ratio and mortality in patients with severe trauma: the PROPPR randomized clinical trial. <em>JAMA, 313</em>(5), 471–482.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · Resucitación shock ortopédico -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Resucitación &amp; tratamiento del shock</div>
+        <h2>Trauma ortopédico &amp; torniquetes</h2>
+        <ul style="font-size:.74em">
+          <li><strong>Epidemiología:</strong> la hemorragia masiva sigue siendo la principal causa de muerte prevenible en trauma civil y militar.</li>
+          <li><strong>Cambio de paradigma:</strong> el ortopedista se integra activamente a la reanimación, más allá del manejo aislado de la fractura.</li>
+          <li><strong>Torniquetes:</strong> aplicación inmediata en lesiones sangrantes masivas (aplastamiento, amputaciones, Gustilo III-C) reduce la mortalidad prehospitalaria.</li>
+          <li><strong>Regla de oro:</strong> permanecen monitorizados con hora de aplicación registrada hasta el control quirúrgico definitivo (tiempo seguro &lt; 2 horas).</li>
+        </ul>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Beltran, M. J., Becker, T. E., Hurley, R. K., Gurney, J. M., &amp; Hayda, R. A. (2016). Resuscitation and Treatment of Shock. <em>Journal of Orthopaedic Trauma, 30</em>(Suppl 3), S2–S6.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 · Herramientas diagnóstico -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Diagnóstico &amp; control hemostático</div>
+        <h2>Herramientas avanzadas en shock</h2>
+        <div class="grid2" style="font-size:.72em">
+          <div><ul>
+            <li><strong>Imagenología:</strong> FAST (extendido pleuropulmonar) y radiografía AP de pelvis/tórax como herramientas iniciales en sala de choque.</li>
+            <li><strong>LPD:</strong> vigente cuando el FAST es indeterminado, el paciente persiste inestable y no hay acceso seguro a Pan-Scan.</li>
+          </ul></div>
+          <div><ul>
+            <li><strong>TXA:</strong> máxima eficacia con carga de 1 g dentro de la primera hora (máx. 3 h) — protocolo <em>CRASH-2</em>.</li>
+            <li><strong>REBOA:</strong> eficaz en hemorragia pélvica arterial no compresible inestable (Zona III de la aorta).</li>
+          </ul></div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>CRASH-2 collaborators. (2010). Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage (CRASH-2): a randomised, placebo-controlled trial. <em>The Lancet, 376</em>(9734), 23–32.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 · Criterios MTP -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Índices predictivos · transfusión masiva</div>
+        <h2>Criterios de activación del MTP</h2>
+        <div class="grid2" style="font-size:.7em">
+          <div><ul>
+            <li>Pérdida estimada &gt; 1500 mL agudo.</li>
+            <li>&gt; 10 U eritrocitos en 24 h o &gt; 4 U en 1 h.</li>
+            <li>Hipotensión refractaria (PAS &lt; 90 mmHg) sin respuesta a cargas.</li>
+            <li><strong>Monitoreo viscoelástico:</strong> migrar a terapia guiada por metas con <em>TEG / ROTEM</em>.</li>
+          </ul></div>
+          <div class="card">
+            <h3>Score ABC — ≥ 2 pts = 85% prob. de PTM</h3>
+            <ul style="font-size:.92em">
+              <li>Mecanismo penetrante <span class="mono">+1</span></li>
+              <li>PAS ≤ 90 mmHg <span class="mono">+1</span></li>
+              <li>FC ≥ 120 lpm <span class="mono">+1</span></li>
+              <li>FAST positivo <span class="mono">+1</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Cotton, B. A., et al. (2009). A simplified early predictor of excessive transfusion (ADEPT) and massive transfusion (ABC-score) in the injured patient. <em>The Journal of Trauma, 67</em>(2), 263–268.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 · Secundaria y terciaria -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">ATLS&reg; · evaluación secundaria y terciaria</div>
+        <h2>Evaluación secundaria y terciaria</h2>
+        <div class="grid2" style="font-size:.7em">
+          <div class="card">
+            <h3>Evaluación secundaria</h3>
+            <ul>
+              <li>Historia dirigida <em>AMPLIA</em>: Alergias, Medicamentos, Patologías, Última ingesta, Ambiente/Eventos.</li>
+              <li>Examen segmentario: deformidades, arcos anormales, estigmas de alta energía, pulsos.</li>
+              <li>Ejecutarse tras estabilizar la reanimación.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Evaluación terciaria</h3>
+            <ul>
+              <li>Hasta <em>12%</em> de lesiones músculo-esqueléticas pasan desapercibidas (escafoides, meseta tibial, ligamentos).</li>
+              <li>Examen repetido pies-cabeza y revisión de imágenes a las <em>24–48 h</em>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Biffl, W. L., et al. (2003). The tertiary trauma survey: a useful device to detect missed injuries. <em>The Journal of Trauma, 54</em>(1), 38–42.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14 · Indicadores metabólicos -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Indicadores metabólicos de reanimación</div>
+        <h2>Lactato &amp; déficit de base</h2>
+        <div class="grid2" style="font-size:.7em">
+          <div class="card">
+            <h3>Lactato sérico</h3>
+            <span class="stat" style="font-size:1.5em">&lt; 2.5 mmol/L</span>
+            <ul style="margin-top:.3em">
+              <li>Marcador de hipoperfusión y metabolismo anaerobio.</li>
+              <li>Falla en aclarar &gt; 10–20%/h en las primeras 4 h predice disfunción orgánica múltiple.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Déficit de base</h3>
+            <span class="stat" style="font-size:1.5em">−2 a +2 mmol/L</span>
+            <ul style="margin-top:.3em">
+              <li>Valores &lt; −6 mEq/L reflejan acidosis metabólica grave.</li>
+              <li>Se correlaciona con necesidad de transfusión masiva y coagulopatía.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Polmear, M. M., Kakalecik, J., Croft, C., &amp; Hagen, J. E. (2024). Early Care of Polytraumatized Patients: A Framework for Orthopaedic Surgeons. <em>JAAOS, 32</em>(8), 341–350.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 · ISS vs NISS -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Escalas anatómicas de severidad</div>
+        <h2>ISS frente a NISS</h2>
+        <p class="lead" style="font-size:.64em;max-width:64ch"><strong>AIS:</strong> clasifica el daño por regiones del 1 (leve) al 6 (incompatible con la vida).</p>
+        <div class="grid2" style="font-size:.7em">
+          <div class="card">
+            <h3>Injury Severity Score (ISS)</h3>
+            <p class="mono" style="font-size:.95em">ISS = AIS₁² + AIS₂² + AIS₃²</p>
+            <ul><li>Suma los cuadrados de las 3 regiones más afectadas.</li><li><strong>Limitación:</strong> subestima al tomar solo una lesión por región.</li></ul>
+          </div>
+          <div class="card good">
+            <h3>New ISS (NISS)</h3>
+            <p class="mono" style="font-size:.95em">NISS = AIS²ₘₐₓ₁ + AIS²ₘₐₓ₂ + AIS²ₘₐₓ₃</p>
+            <ul><li>Suma las 3 lesiones de mayor AIS, sin importar la región.</li><li>Corrige el sesgo en trauma severo de un solo segmento.</li></ul>
+          </div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Osler, T., Baker, S. P., &amp; Long, W. (1997). A modification of the Injury Severity Score that both improves accuracy and simplifies calculation. <em>The Journal of Trauma, 43</em>(6), 922–925.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16 · Second Hit -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Fenómenos fisiopatológicos</div>
+        <h2>El concepto de <em>Second Hit</em></h2>
+        <p class="lead" style="font-size:.64em;max-width:64ch">Amplificación aguda del SIRS por una segunda agresión (cirugía prolongada) sobre un organismo ya sensibilizado.</p>
+        <div class="grid2" style="font-size:.7em;align-items:start">
+          <div>
+            <div class="card">
+              <h3>First Hit — trauma inicial</h3>
+              <ul><li>Activación masiva de neutrófilos (<em>primed neutrophils</em>).</li><li>Liberación de citocinas proinflamatorias: IL-1, IL-6, TNF-α.</li></ul>
+            </div>
+            <div class="card warn" style="margin-top:.5em">
+              <h3>Second Hit — insulto quirúrgico</h3>
+              <ul><li>Fijación intramedular u osteosíntesis prematura prolongada.</li><li>Disfunción endotelial, microtrombosis, SDRA y falla orgánica múltiple.</li></ul>
+            </div>
+          </div>
+          <figure class="slide-fig">
+            <img src="Imagen2.jpg" alt="Esquema del fenómeno Second Hit">
+          </figure>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Giannoudis, P. V., et al. (2004). Inflammatory response in polytrauma: an overview of the pathophysiology and clinical implications. <em>Injury, 35</em>(5), 440–451.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17 · DCO -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Damage Control Orthopedics (DCO)</div>
+        <h2>Control de daños ortopédico</h2>
+        <div class="grid2" style="font-size:.68em;align-items:start">
+          <div><ul>
+            <li><strong>Concepto:</strong> abordaje escalonado — estabilización provisional con fijadores externos, debridamiento inmediato y diferimiento de la RAFI definitiva.</li>
+            <li><strong>Indicación absoluta:</strong> inestables con Tríada Letal (pH &lt; 7.24, T° &lt; 35 °C, coagulopatía), trauma torácico contuso severo o ISS &gt; 40.</li>
+          </ul>
+            <div class="card good" style="margin-top:.5em"><h3>Ventajas</h3><ul style="font-size:.92em"><li>&lt; 30 min/segmento, menos sangrado, evita Second Hit, reduce SDRA.</li></ul></div>
+            <div class="card warn" style="margin-top:.4em"><h3>Desventajas</h3><ul style="font-size:.92em"><li>Múltiples cirugías, infección en trayecto de pines, retraso en rehabilitación.</li></ul></div>
+          </div>
+          <figure class="slide-fig">
+            <img src="1.jpg" alt="Damage Control Orthopedics — estabilización provisional">
+          </figure>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Scalea, T. M., et al. (2000). Damage control orthopedics: a strategy for the management of the patient with an open pelvic fracture. <em>Journal of Orthopaedic Trauma, 14</em>(7), 468–472.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18 · ETC -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Early Total Care (ETC)</div>
+        <h2>Tratamiento definitivo temprano</h2>
+        <div class="grid2" style="font-size:.68em;align-items:start">
+          <div><ul>
+            <li><strong>Concepto:</strong> fijación interna rígida definitiva de todas las fracturas mayores en un único tiempo, dentro de las primeras <em>24 h</em>.</li>
+            <li><strong>Indicación absoluta:</strong> exclusivo para pacientes <em>estables</em> — normotermia, sin acidosis, coagulación intacta.</li>
+          </ul>
+            <div class="card good" style="margin-top:.5em"><h3>Ventajas</h3><ul style="font-size:.92em"><li>Menos días/costos, sin dolor óseo continuo, movilización ultra-temprana.</li></ul></div>
+            <div class="card warn" style="margin-top:.4em"><h3>Desventajas</h3><ul style="font-size:.92em"><li>Estrés metabólico masivo; deletéreo en inestables o <em>borderline</em>.</li></ul></div>
+          </div>
+          <figure class="slide-fig">
+            <img src="Imagen4.jpg" alt="Early Total Care — fijación definitiva temprana">
+          </figure>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Pape, H. C., et al. (2002). Effects of changing strategies of fracture fixation on immunologic changes and systemic complications in polytrauma patients. <em>The Journal of Trauma, 52</em>(1), 14–21.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 19 · DCO vs ETC evidencia -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Evidencia clínica · DCO frente a ETC</div>
+        <h2>Impacto sobre el SDRA / ARDS</h2>
+        <div class="grid2" style="gap:1.6em">
+          <div class="card warn" style="text-align:center;padding:1.3em 1em"><div class="statlabel">ETC — fijación total temprana</div><div class="stat" style="font-size:3em;margin:.12em 0">54.6%</div><div class="statlabel">incidencia de ARDS</div></div>
+          <div class="card good" style="text-align:center;padding:1.3em 1em"><div class="statlabel">DCO — control de daños</div><div class="stat" style="font-size:3em;margin:.12em 0">26.4%</div><div class="statlabel">incidencia de ARDS</div></div>
+        </div>
+        <ul style="font-size:.66em;margin-top:.9em">
+          <li><strong>Ponderación operativa:</strong> equilibrar el beneficio de supervivencia pulmonar del DCO frente al mayor riesgo de procedimientos secundarios y retraso de consolidación.</li>
+        </ul>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Pape, H. C., et al. (2007). Impact of the method of initial stabilization for femoral shaft fractures in patients with multiple injuries: a randomized prospective study. <em>Journal of Orthopaedic Trauma, 21</em>(5), 293–299.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 20 · EAC -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Early Appropriate Care (EAC)</div>
+        <h2>Fijación condicionada al estado fisiometabólico</h2>
+        <ul style="font-size:.72em">
+          <li><strong>Consenso:</strong> fijación definitiva de fracturas mayores (fémur, anillo pélvico, columna) dentro de las primeras <em>36 h</em>, condicionada al estatus fisiometabólico óptimo.</li>
+          <li><strong>Umbral del lactato:</strong> ≤ 2.5 mmol/L como indicador de adecuada reanimación tisular — autoriza fijación interna definitiva a las 24–36 h.</li>
+          <li><strong>Contraindicación:</strong> si el lactato no desciende por debajo de 2.5 mmol/L pese a reanimación intensiva → estado inestable; abortar ETC/EAC e implementar DCO de urgencia.</li>
+        </ul>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Stevens, N. M., &amp; Tejwani, N. C. (2024). Damage-control orthopedics or early total care: what you need to know. <em>The Journal of Trauma and Acute Care Surgery, 96</em>(5), 694–701.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 21 · Parámetros éxito -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Parámetros de éxito · Safe Definitive Surgery</div>
+        <h2>Criterios del estado "estable" (SDS)</h2>
+        <p class="lead" style="font-size:.64em;max-width:72ch">Ventana inmunológica segura: día <em>6–8</em>, evitando la ventana de peligro hiperinflamatoria de los días 2–5.</p>
+        <div class="grid2" style="font-size:.68em">
+          <div><ul>
+            <li><strong>Hemodinámica:</strong> PA óptima sin vasopresores.</li>
+            <li><strong>Pulmonar:</strong> PaO₂/FiO₂ &gt; 300 mmHg, sin hipercapnia.</li>
+            <li><strong>Metabólico:</strong> lactato &lt; 2.5 mmol/L sostenido.</li>
+          </ul></div>
+          <div><ul>
+            <li><strong>Coagulación:</strong> INR &lt; 1.4 o TEG estable.</li>
+            <li><strong>Térmico:</strong> normotermia &gt; 36 °C.</li>
+            <li><strong>Renal:</strong> gasto urinario &gt; 1 mL/kg/h.</li>
+          </ul></div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Polmear, M. M., Kakalecik, J., Croft, C., &amp; Hagen, J. E. (2024). Early Care of Polytraumatized Patients: A Framework for Orthopaedic Surgeons. <em>JAAOS, 32</em>(8), 341–350.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 22 · Pediátrico fisiología -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Politrauma pediátrico · particularidades</div>
+        <h2>Fisiología del niño politraumatizado</h2>
+        <div class="grid2" style="font-size:.68em">
+          <div><ul>
+            <li><strong>Dimorfismo cefálico:</strong> cabeza proporcionalmente mayor → más TCE severo y lesión cervical alta (C1–C3).</li>
+            <li><strong>Reserva cardiovascular:</strong> compensa hasta 30% de volemia con PA normal; luego descompensa de forma abrupta y catastrófica.</li>
+          </ul></div>
+          <div><ul>
+            <li><strong>Fisiología térmica:</strong> alta relación superficie/masa → hipotermia rápida que inhibe la coagulación.</li>
+            <li><strong>Pared torácica:</strong> cartílago elástico → contusiones pulmonares masivas sin fracturas costales.</li>
+          </ul></div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>American College of Surgeons Committee on Trauma. (2018). <em>Advanced Trauma Life Support (ATLS&reg;) Student Course Manual</em> (10th ed.). Chicago: American College of Surgeons.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 23 · Pediátrico manejo -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Politrauma pediátrico · manejo técnico</div>
+        <h2>Estabilización &amp; complicaciones</h2>
+        <div class="grid2" style="font-size:.68em">
+          <div class="card warn">
+            <h3>Complicaciones ortopédicas</h3>
+            <ul><li>Síndrome compartimental agudo (infradiagnosticado; sospechar ante agitación y analgesia creciente).</li><li>Arresto focal del crecimiento por daño/isquemia de la fisis.</li></ul>
+          </div>
+          <div class="card">
+            <h3>Guías de estabilización</h3>
+            <ul><li><strong>Huesos largos (fémur/tibia):</strong> clavos flexibles de titanio (TEN) o fijador externo biológico, respetando la fisis.</li><li><strong>Huesos pequeños:</strong> agujas de Kirschner (K-wires).</li><li><em>Contraindicado:</em> inmovilización rígida prolongada sobre piel pediátrica hipoperfundida.</li></ul>
+          </div>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Flynn, J. M., Choi, P. D., &amp; Skaggs, D. L. (2024). <em>Rockwood and Wilkins' Fractures in Children</em> (9th ed.). Philadelphia: Wolters Kluwer.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 24 · Fractura + quemadura -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Lesiones asociadas · fractura + quemadura</div>
+        <h2>Fijación temprana bajo piel quemada</h2>
+        <ul style="font-size:.7em">
+          <li><strong>Evidencia:</strong> la fijación interna rígida ultra-temprana en segmentos con quemadura asociada se correlaciona con mayor tasa de consolidación y menos infección — rompe el mito de diferir la cirugía.</li>
+        </ul>
+        <div class="card good" style="margin-top:.3em;font-size:.58em">
+          <h3>Protocolo en lesiones co-localizadas</h3>
+          <ul>
+            <li><span class="mono">1</span> · Lavado y asepsia mecánica con Gluconato de Clorhexidina estándar.</li>
+            <li><span class="mono">2</span> · Desbridamiento de la escara necrótica superficial antes de incidir.</li>
+            <li><span class="mono">3</span> · Osteosíntesis interna rígida dentro de las primeras <em>48 h</em>.</li>
+          </ul>
+        </div>
+        <div class="slide-figs">
+          <figure class="slide-fig">
+            <img src="Imagen5.jpg" alt="Fractura con quemadura asociada — caso clínico 1">
+          </figure>
+          <figure class="slide-fig">
+            <img src="Imagen6.jpg" alt="Fractura con quemadura asociada — caso clínico 2">
+          </figure>
+        </div>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Wise, C. P. M., Ivanko, A., Vander Voort, C. W. D., Lee, M. A., &amp; Palmieri, T. L. (2024). Femur fractures in burn patients: a 22-year case series. <em>Burns Open, 8</em>(2), 75–81.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 25 · Principios quirúrgicos quemaduras -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Principios avanzados · quemaduras</div>
+        <h2>Manejo quirúrgico &amp; postoperatorio</h2>
+        <ul style="font-size:.68em">
+          <li>La estabilidad mecánica de la fijación interna tiene prioridad biológica sobre la ubicación de la incisión respecto a los límites de la quemadura.</li>
+          <li><strong>Cobertura post-fijación:</strong> aloinjertos biológicos con apósitos antimicrobianos como cierre temporal sobre el tejido expuesto.</li>
+          <li><strong>Reconstrucción definitiva:</strong> autoinjertos cutáneos entre los <em>7 y 10 días</em> tras la cirugía ortopédica.</li>
+          <li><strong>Profilaxis de osificación heterotópica:</strong> en fémur + quemadura con TBSA ≥ 20% — radioterapia local a dosis bajas o indometacina/AINEs.</li>
+        </ul>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Wise, C. P. M., Ivanko, A., Vander Voort, C. W. D., Lee, M. A., &amp; Palmieri, T. L. (2024). Femur fractures in burn patients: a 22-year case series. <em>Burns Open, 8</em>(2), 75–81.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 26 · Evans 1966 -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Validación histórica del manejo precoz</div>
+        <ul style="font-size:.72em">
+          <li>Las escaras por quemaduras agudas permanecen biológicamente <em>estériles</em> durante las primeras <em>48 horas</em> tras el insulto térmico.</li>
+          <li>La RAFI / ORIF en quemados críticos puede ejecutarse con seguridad elevada, condicionada a estabilización hemodinámica y metabólica previa.</li>
+          <li>La RAFI dentro de las 48 h —con reanimación agresiva— es más segura y asocia menos sepsis local e infección profunda que la fijación diferida tardía (piel ya colonizada).</li>
+        </ul>
+        <div class="ref">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1a5f9e" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg>
+          <ol><li>Evans, E. Burke. (1966). Orthopaedic Measures in the Treatment of Severe Burns. <em>The Journal of Bone &amp; Joint Surgery (JBJS), 48</em>(4), 643–669.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 27 · Bibliografía general -->
+    <section>
+      <div class="slidewrap">
+        <div class="kicker">Literatura científica de alta especialidad</div>
+        <h2>Bibliografía general</h2>
+        <ol style="font-size:.48em;line-height:1.5;columns:2;column-gap:2.4em;margin-top:.3em;padding-left:1.3em;color:var(--text-soft)">
+          <li>Tornetta, P., III, et al. (2025). <em>Rockwood and Green's Fractures in Adults</em> (10th ed.). Lippincott Williams &amp; Wilkins.</li>
+          <li>American College of Surgeons Committee on Trauma. (2018). <em>ATLS&reg; Student Course Manual</em> (10th ed.). Chicago: ACS.</li>
+          <li>Beltran, M. J., et al. (2016). Resuscitation and Treatment of Shock. <em>J Orthop Trauma, 30</em>(Suppl 3), S2–S6.</li>
+          <li>Stevens, N. M., &amp; Tejwani, N. C. (2024). Damage-control orthopedics or early total care. <em>J Trauma Acute Care Surg, 96</em>(5), 694–701.</li>
+          <li>Polmear, M. M., et al. (2024). Early Care of Polytraumatized Patients. <em>JAAOS, 32</em>(8), 341–350.</li>
+          <li>Wise, C. P. M., et al. (2024). Femur fractures in burn patients: a 22-year case series. <em>Burns Open, 8</em>(2), 75–81.</li>
+          <li>Evans, E. Burke. (1966). Orthopaedic Measures in the Treatment of Severe Burns. <em>JBJS, 48</em>(4), 643–669.</li>
+        </ol>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  const deck = new Reveal({
+    hash:true,
+    transition:'none',
+    backgroundTransition:'none',
+    controls:true,
+    progress:true,
+    slideNumber:'c/t',
+    center:false,
+    width:1280,
+    height:720,
+    margin:0,
+    fragments:false
+  });
+  deck.initialize();
+
+  /* ---------- Modo presentación (pantalla completa) ---------- */
+  const btnPresent = document.getElementById('btn-present');
+  const btnZoomIn  = document.getElementById('btn-zoom-in');
+  const btnZoomOut = document.getElementById('btn-zoom-out');
+
+  function isFullscreen(){
+    return !!(document.fullscreenElement || document.webkitFullscreenElement);
+  }
+
+  async function enterPresentation(){
+    const el = document.documentElement;
+    try{
+      if(el.requestFullscreen) await el.requestFullscreen();
+      else if(el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    }catch(err){ console.warn('Fullscreen no disponible:', err); }
+    document.body.classList.add('presentation-mode');
+    btnPresent.textContent = 'Salir presentación';
+    btnPresent.classList.add('active');
+  }
+
+  function exitPresentation(){
+    if(isFullscreen()){
+      if(document.exitFullscreen) document.exitFullscreen();
+      else if(document.webkitExitFullscreen) document.webkitExitFullscreen();
+    }
+    document.body.classList.remove('presentation-mode');
+    btnPresent.textContent = 'Modo presentación';
+    btnPresent.classList.remove('active');
+  }
+
+  async function togglePresentation(){
+    if(isFullscreen()) exitPresentation();
+    else await enterPresentation();
+  }
+
+  btnPresent.addEventListener('click', togglePresentation);
+  document.addEventListener('fullscreenchange', () => {
+    if(!isFullscreen()){
+      document.body.classList.remove('presentation-mode');
+      btnPresent.textContent = 'Modo presentación';
+      btnPresent.classList.remove('active');
+    }
+  });
+
+  if(new URLSearchParams(location.search).get('present') === '1'){
+    deck.on('ready', () => enterPresentation());
+  }
+
+  /* ---------- Zoom con Ctrl + / Ctrl − ---------- */
+  const ZOOM_STEPS = [1, 1.35, 1.75, 2.2, 2.7];
+  let zoomIndex = 0;
+
+  function applyZoom(section){
+    if(!section) return;
+    const z = ZOOM_STEPS[zoomIndex];
+    section.style.transition = 'transform .35s cubic-bezier(.2,.7,.2,1)';
+    section.style.transformOrigin = 'center center';
+    section.style.transform = z === 1 ? '' : 'scale(' + z + ')';
+    section.classList.toggle('zoomed', z !== 1);
+  }
+
+  function resetZoom(section){
+    zoomIndex = 0;
+    if(section){ section.style.transform=''; section.classList.remove('zoomed'); }
+  }
+
+  function zoomIn(){
+    const current = deck.getCurrentSlide();
+    zoomIndex = Math.min(zoomIndex + 1, ZOOM_STEPS.length - 1);
+    applyZoom(current);
+  }
+
+  function zoomOut(){
+    const current = deck.getCurrentSlide();
+    zoomIndex = Math.max(zoomIndex - 1, 0);
+    applyZoom(current);
+  }
+
+  btnZoomIn.addEventListener('click', zoomIn);
+  btnZoomOut.addEventListener('click', zoomOut);
+
+  document.addEventListener('keydown', (e) => {
+    const tag = (e.target.tagName || '').toLowerCase();
+    if(tag === 'input' || tag === 'textarea') return;
+    const current = deck.getCurrentSlide();
+
+    /* Modo presentación — tecla P */
+    if(!e.ctrlKey && !e.metaKey && !e.altKey && (e.key === 'p' || e.key === 'P')){
+      e.preventDefault();
+      togglePresentation();
+      return;
+    }
+
+    /* Zoom — Ctrl + / Ctrl − (y Ctrl 0 para restablecer) */
+    if(e.ctrlKey || e.metaKey){
+      const zoomInKey  = e.key === '+' || e.key === '=' || e.code === 'NumpadAdd';
+      const zoomOutKey = e.key === '-' || e.key === '_' || e.code === 'NumpadSubtract';
+      if(zoomInKey){
+        e.preventDefault();
+        zoomIn();
+        return;
+      }
+      if(zoomOutKey){
+        e.preventDefault();
+        zoomOut();
+        return;
+      }
+      if(e.key === '0'){
+        e.preventDefault();
+        resetZoom(current);
+        return;
+      }
+    }
+
+    if(e.key === 'Escape' && zoomIndex !== 0){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      resetZoom(current);
+    }
+  }, true);
+
+  deck.on('slidechanged', (evt) => {
+    if(evt.previousSlide) resetZoom(evt.previousSlide);
+    zoomIndex = 0;
+  });
+
+  const hint = document.getElementById('zoomhint');
+  setTimeout(()=>{ hint.style.opacity = '0'; }, 8000);
+  document.addEventListener('mousemove', ()=>{ if(!document.body.classList.contains('presentation-mode')) hint.style.opacity='0'; }, {once:true});
+</script>
+</body>
+</html>
